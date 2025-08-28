@@ -97,7 +97,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="274dp" />
+        tools:layout_editor_absoluteY="268dp" />
 
     <TextView
         android:id="@+id/textView9"
@@ -107,7 +107,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="356dp" />
+        tools:layout_editor_absoluteY="370dp" />
 
     <TextView
         android:id="@+id/textView11"
@@ -118,5 +118,14 @@
         app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="323dp" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="146dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
