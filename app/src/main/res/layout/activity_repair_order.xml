@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,87 +7,218 @@
     android:layout_height="match_parent"
     tools:context=".RepairOrderActivity">
 
-    <!-- title label -->
     <TextView
-        android:id="@+id/titleLabel"
-        android:layout_width="211dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="100dp"
-        android:fontFamily="cursive"
-        android:text="@string/title_label"
+        android:id="@+id/repairOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:text="@string/repair_order"
         android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textSize="30sp"
+        android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- divider below title -->
-    <View
-        android:id="@+id/titleDivider"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="12dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@id/titleLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <!-- subheader -->
     <TextView
-        android:id="@+id/textSubheader"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo_tammudu"
-        android:text="@string/subheader"
-        app:layout_constraintTop_toBottomOf="@id/titleDivider"
+        android:layout_marginTop="20dp"
+        android:text="@string/textview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/repairOrder"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <!-- order type label -->
     <TextView
-        android:id="@+id/textOrderType"
+        android:id="@+id/inspection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/order_type"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textSubheader"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="76dp"
+        android:text="@string/inspection"
+        app:layout_constraintEnd_toStartOf="@+id/editInspection"
+        app:layout_constraintTop_toBottomOf="@+id/technician" />
 
-    <!-- order type input -->
-    <EditText
-        android:id="@+id/editOrderType"
-        android:layout_width="180dp"
-        android:layout_height="42dp"
-        app:layout_constraintStart_toEndOf="@id/textOrderType"
-        app:layout_constraintTop_toTopOf="@id/textOrderType"
-        android:ems="10"
-        android:inputType="text"/>
-
-    <!-- technician label -->
     <TextView
-        android:id="@+id/textTechnician"
+        android:id="@+id/technician"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:text="@string/technician"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textOrderType"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintStart_toStartOf="@+id/paint"
+        app:layout_constraintTop_toBottomOf="@+id/orderType" />
 
-    <!-- technician input -->
+    <TextView
+        android:id="@+id/orderType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/order_type"
+        app:layout_constraintStart_toStartOf="@+id/labor"
+        app:layout_constraintTop_toTopOf="@+id/editOrderType" />
+
+    <TextView
+        android:id="@+id/paint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/paint"
+        app:layout_constraintEnd_toStartOf="@+id/editPaint"
+        app:layout_constraintTop_toBottomOf="@+id/inspection" />
+
+    <TextView
+        android:id="@+id/parts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/parts"
+        app:layout_constraintEnd_toStartOf="@+id/editParts"
+        app:layout_constraintTop_toBottomOf="@+id/paint" />
+
+    <TextView
+        android:id="@+id/labor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/labor"
+        app:layout_constraintEnd_toStartOf="@+id/editLabor"
+        app:layout_constraintTop_toBottomOf="@+id/parts" />
+
+    <TextView
+        android:id="@+id/subtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/subtotal"
+        app:layout_constraintStart_toStartOf="@+id/total"
+        app:layout_constraintTop_toBottomOf="@+id/editLabor" />
+
+    <TextView
+        android:id="@+id/tax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="184dp"
+        android:text="@string/tax"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtotal" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="176dp"
+        android:text="@string/total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tax" />
+
     <EditText
         android:id="@+id/editTechnician"
-        android:layout_width="180dp"
-        android:layout_height="42dp"
-        app:layout_constraintStart_toEndOf="@id/textTechnician"
-        app:layout_constraintTop_toTopOf="@id/textTechnician"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
-        android:inputType="text"/>
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/technician"
+        app:layout_constraintTop_toBottomOf="@+id/editOrderType" />
 
-    <!-- add the rest of inputs like inspection, paint, parts, labor similarly -->
+    <EditText
+        android:id="@+id/editOrderType"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/orderType"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editInspection"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="44dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTechnician" />
+
+    <EditText
+        android:id="@+id/editPaint"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editInspection"
+        app:layout_constraintTop_toBottomOf="@+id/editInspection" />
+
+    <EditText
+        android:id="@+id/editParts"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editTechnician"
+        app:layout_constraintTop_toBottomOf="@+id/editPaint" />
+
+    <EditText
+        android:id="@+id/editLabor"
+        android:layout_width="162dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/editInspection"
+        app:layout_constraintTop_toBottomOf="@+id/editParts" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="76dp"
+        android:text="submit"
+        app:layout_constraintEnd_toStartOf="@+id/tax"
+        app:layout_constraintTop_toBottomOf="@+id/labor" />
+
+    <TextView
+        android:id="@+id/subtotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="@string/_0_0"
+        app:layout_constraintStart_toEndOf="@+id/subtotal"
+        app:layout_constraintTop_toTopOf="@+id/subtotal" />
+
+    <TextView
+        android:id="@+id/taxValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:text="@string/_0_0"
+        app:layout_constraintStart_toEndOf="@+id/tax"
+        app:layout_constraintTop_toTopOf="@+id/tax" />
+
+    <TextView
+        android:id="@+id/totalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:text="@string/_0_0"
+        app:layout_constraintStart_toEndOf="@+id/total"
+        app:layout_constraintTop_toTopOf="@+id/total" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

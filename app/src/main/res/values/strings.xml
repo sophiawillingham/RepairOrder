@@ -1,27 +1,15 @@
 <resources>
-    <!-- default text -->
-    <string name="order_type">Oil Change</string>
-    <string name="technician">Complete</string>
-    <string name="paint_cost">$50.0</string>
-    <string name="parts_cost">$120.0</string>
-    <string name="labor_cost">$80.0</string>
-
-    <!-- totals -->
-    <string name="subtotal">$250.0</string>
-    <string name="tax">$20.0</string>
-    <string name="total">$270.0</string>
-
-    <!-- labels -->
-    <string name="repair_order_header">Repair Order</string>
-    <string name="order_type_label">Order Type</string>
-    <string name="technician_label">Technician</string>
-    <string name="inspection_label">Inspection</string>
-    <string name="paint_label">Paint</string>
-    <string name="parts_label">Parts</string>
-    <string name="labor_label">Labor</string>
-    <string name="subtotal_label">Subtotal</string>
-    <string name="tax_label">Tax</string>
-    <string name="total_label">Total</string>
-    <string name="subheader">Subheader</string>
-    <string name="title_label">Subheader</string>
+    <string name="app_name">RepairOrder</string>
+    <string name="repair_order">Repair Order</string>
+    <string name="textview">TextView</string>
+    <string name="inspection">Inspection</string>
+    <string name="paint">Paint</string>
+    <string name="parts">Parts</string>
+    <string name="labor">Labor</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="tax">Tax</string>
+    <string name="total">Total</string>
+    <string name="technician">Technician</string>
+    <string name="order_type">Order Type</string>
+    <string name="_0_0">$0.0</string>
 </resources>
