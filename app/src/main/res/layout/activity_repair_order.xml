@@ -34,7 +34,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/inspection"
+        android:id="@+id/Inspection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:text="@string/technician"
-        app:layout_constraintStart_toStartOf="@+id/paint"
+        app:layout_constraintStart_toStartOf="@+id/Paint"
         app:layout_constraintTop_toBottomOf="@+id/orderType" />
 
     <TextView
@@ -58,38 +58,38 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/order_type"
-        app:layout_constraintStart_toStartOf="@+id/labor"
+        app:layout_constraintStart_toStartOf="@+id/Labor"
         app:layout_constraintTop_toTopOf="@+id/editOrderType" />
 
     <TextView
-        android:id="@+id/paint"
+        android:id="@+id/Paint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="108dp"
         android:text="@string/paint"
         app:layout_constraintEnd_toStartOf="@+id/editPaint"
-        app:layout_constraintTop_toBottomOf="@+id/inspection" />
+        app:layout_constraintTop_toBottomOf="@+id/Inspection" />
 
     <TextView
-        android:id="@+id/parts"
+        android:id="@+id/Parts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="108dp"
         android:text="@string/parts"
         app:layout_constraintEnd_toStartOf="@+id/editParts"
-        app:layout_constraintTop_toBottomOf="@+id/paint" />
+        app:layout_constraintTop_toBottomOf="@+id/Paint" />
 
     <TextView
-        android:id="@+id/labor"
+        android:id="@+id/Labor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="108dp"
         android:text="@string/labor"
         app:layout_constraintEnd_toStartOf="@+id/editLabor"
-        app:layout_constraintTop_toBottomOf="@+id/parts" />
+        app:layout_constraintTop_toBottomOf="@+id/Parts" />
 
     <TextView
         android:id="@+id/subtotal"
@@ -191,7 +191,7 @@
         android:layout_marginEnd="76dp"
         android:text="submit"
         app:layout_constraintEnd_toStartOf="@+id/tax"
-        app:layout_constraintTop_toBottomOf="@+id/labor" />
+        app:layout_constraintTop_toBottomOf="@+id/Labor" />
 
     <TextView
         android:id="@+id/subtotalValue"

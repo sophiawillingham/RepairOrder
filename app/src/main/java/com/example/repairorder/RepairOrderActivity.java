@@ -20,13 +20,38 @@ public class RepairOrderActivity extends AppCompatActivity { // parent class for
     double numbers = 0.0;
 
     TextView subtotalPrice;
+
+    EditText orderET;
+    EditText orderEI;
+    EditText orderPaint;
+    EditText orderParts;
+    EditText orderLabor;
+
     Button submitB; // 1. create button
 
     View.OnClickListener buttonListener = new View.OnClickListener() { // 3. create listener
         @Override
         public void onClick(View v) { //5.
-            Random gen = new Random();
-            double number = gen.nextDouble();
+            //Random gen = new Random();
+            //double number = gen.nextDouble();
+
+            String orderTypeValue = orderET.getText().toString();
+
+            //Integer it = Integer.getInteger(orderTypeValue); //returns the integer
+
+            String InspectionValue = orderEI.getText().toString();
+            Double ot = Double.parseDouble(orderTypeValue); //returns the double
+
+            String PaintValue = orderET.getText().toString();
+            Double pt = Double.parseDouble(PaintValue); //returns the double
+
+            String PartsValue = orderET.getText().toString();
+            Double ppt = Double.parseDouble(PartsValue); //returns the double
+
+            String LaborValue = orderET.getText().toString();
+            Double lv = Double.parseDouble(LaborValue); //returns the double
+
+            double number = ot+pt+ppt+lv;
             String n = "$" + number;
             subtotalPrice.setText(n);
         }
@@ -47,7 +72,11 @@ public class RepairOrderActivity extends AppCompatActivity { // parent class for
         subtotalPrice= findViewById(R.id.subtotalValue); //locate any thing in UI
         submitB = findViewById(R.id.submitButton); // 2.
         submitB.setOnClickListener(buttonListener); // 4. registering the listener to the button
-
+        orderET = findViewById(R.id.editOrderType);
+        orderEI = findViewById(R.id.editInspection);
+        orderPaint = findViewById(R.id.editPaint);
+        orderParts = findViewById(R.id.editParts);
+        orderLabor = findViewById(R.id.editLabor);
 //        Random gen = new Random();
 //        double number = gen.nextDouble();
 //        String n = "$" + number;
